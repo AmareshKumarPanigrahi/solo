@@ -1,10 +1,10 @@
 package genericUtility;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.*;
+
 
 public class BaseClass {
 	
@@ -24,7 +24,7 @@ public class BaseClass {
 	}
 	
 	@AfterClass
-	public void afterClass()
+	public  void close()
 	{
 		driver.close();
 	}
