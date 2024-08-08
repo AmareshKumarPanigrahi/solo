@@ -3,6 +3,7 @@ package practiceTest;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -14,6 +15,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -36,13 +39,13 @@ public class AmazonTest {
 		WebDriver driver=new EdgeDriver(options);
 		driver.manage().window().maximize();*/
 		
-		ChromeOptions options=new ChromeOptions();
+		/*ChromeOptions options=new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		WebDriver driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));*/
 		
-	     driver.get("https://www.amazon.in/");
+	     /*driver.get("https://www.amazon.in/");
          List<WebElement> wbs=driver.findElements(By.xpath("//*[a]"));
          
          FileInputStream fis=new FileInputStream("./src/test/resources/SeleniumDemo.xlsx");
@@ -59,10 +62,17 @@ public class AmazonTest {
 		FileOutputStream fos=new FileOutputStream("./src/test/resources/SeleniumDemo.xlsx");
 		book.write(fos);
 		fos.flush();
-		book.close();
+		book.close();*/
 		
 		
 		
+		
+		JSONParser parser=new JSONParser();
+		Object obj=parser.parse(new FileReader("./Common.json"));
+		
+		JSONObject jobj=(JSONObject)obj;
+		String name=(String)jobj.get("name");
+		System.out.println(name);
 		
 		
 		
