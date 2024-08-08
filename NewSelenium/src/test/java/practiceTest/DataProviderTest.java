@@ -26,7 +26,7 @@ public class DataProviderTest extends BaseClass{
 		
 		searchbar.sendKeys(items,Keys.ENTER);
 		Thread.sleep(3000);
-		System.out.println("as");
+		System.out.println("ass");
 		
 		
 		
