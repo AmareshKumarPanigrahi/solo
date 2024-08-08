@@ -20,6 +20,9 @@ public class BaseClass {
 		String browser=System.getProperty("browser");
 		String env=System.getProperty("env");
 
+
+
+
 		if(browser.equals("chrome")) {
 			driver = new ChromeDriver();
 			listenerdriver = driver;
@@ -31,6 +34,8 @@ public class BaseClass {
 			listenerdriver = driver;
 
 		}
+
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
