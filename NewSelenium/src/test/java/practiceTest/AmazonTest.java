@@ -63,20 +63,20 @@ public class AmazonTest {
 		book.write(fos);
 		fos.flush();
 		book.close();*/
-		
-		
-		
-		
+
+
+
+
 		JSONParser parser=new JSONParser();
 		Object obj=parser.parse(new FileReader("./Common.json"));
-		
+
 		JSONObject jobj=(JSONObject)obj;
 		String name=(String)jobj.get("name");
 		System.out.println(name);
-		
-		
-		
-		
+
+
+
+
 	}
 
 }

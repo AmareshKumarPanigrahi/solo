@@ -1,5 +1,6 @@
 package practiceTest;
 
+import com.zebrunner.agent.core.annotation.TestLabel;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
@@ -11,18 +12,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import com.zebrunner.agent.core.annotation.TestLabel;
 
 import genericUtility.BaseClass;
 
 public class DataProviderTest extends BaseClass{
 	
 	@Test(dataProvider="dataSupplier")
+	@TestLabel(name = "testcase_id", value = "T-1")
 	public  void testingamazonSearchTest(String items) throws InterruptedException
 	
 	{
 		driver.get("https://www.amazon.in/");
 		Thread.sleep(2000);
-		WebElement searchbar=driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+		WebElement searchbar=driver.findElement(By.xpath("//input[@id='twotabsearchtextbo']"));
 		
 		searchbar.sendKeys(items,Keys.ENTER);
 		Thread.sleep(3000);
