@@ -19,7 +19,7 @@ import genericUtility.BaseClass;
 public class DataProviderTest extends BaseClass{
 	
 	@Test(dataProvider="dataSupplier")
-	@TestLabel(name = "testcase_id", value = "T-1")
+
 	public  void testingamazonSearchTest(String items) throws InterruptedException
 	
 	{
@@ -33,8 +33,7 @@ public class DataProviderTest extends BaseClass{
 		
 		
 	}
-	
-	
+
 	
 	
 	
@@ -43,7 +42,7 @@ public class DataProviderTest extends BaseClass{
 	@DataProvider
 	public Object[] dataSupplier()
 	{
-		Object[] obj=new Object[4];
+		Object[] obj=new Object[2][2];
 		obj[0]="toys";
 		obj[1]="iphone";
 		obj[2]="tshirt";
