@@ -15,7 +15,7 @@ public class ShadowRoot {
     public void getShadowRoot()
     {
         WebDriver driver=new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://books-pwakit.appspot.com/");
         driver.findElement(By.xpath("//book-app[@apptitle='BOOKS']")).getShadowRoot().findElement(By.cssSelector("input[id='input']")).sendKeys("hi");
 
